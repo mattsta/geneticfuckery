@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "geneticfuckery"
+version = "0.1.7"
+description = "kinda genetic evolution from kinda usable inputs"
+authors = ["Matt Stancliff <matt@genges.com>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.9,<3.11"
+loguru = ">0.5.0"
+orjson = "^3.6.5"
+dynaconf = "^3.1.7"
+fire = "^0.4.0"
+pandas = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.942"
+pytest = "^7.1.1"
+
+[tool.poetry.scripts]
+gf-load = "geneticfuckery.gf:externalLoader"
+gf-top = "geneticfuckery.gf:externalHighest"
+gf-breeder = "geneticfuckery.gf:externalBreeder"
+gf-breeder-auto = "geneticfuckery.gf:externalBreederAuto"
+gf-report = "geneticfuckery.gf:externalParamReport"
+gf-compare = "geneticfuckery.differ:cmd"
+gf-template-run = "geneticfuckery.gf:generateRunTemplate"
+gf-plot-runs = "geneticfuckery.gf:plotRuns"
+gf-merge-performers = "geneticfuckery.gf:mergePerformers"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

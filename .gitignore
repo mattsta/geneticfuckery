@@ -1,0 +1,7 @@
+*.db*
+*.gf*
+*.bak
+*.js
+*.sh
+*.sql
+poetry.lock
